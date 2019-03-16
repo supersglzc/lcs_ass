@@ -21,9 +21,9 @@ int lcs3(int *a, int n,  int *b, int m, int *c, int l) {
       			return 0;
    	}else{
       		if((a[n - 1] == b[m - 1]) && (b[m - 1] == c[l - 1])){
-         		return get_max(lcs3(a, n, b, m-1, c, l), lcs3(a, n-1, b, m, c, l), lcs3(a, n, b, m, c, l-1)) + 1;
+         		return get_max(lcs3(a, n, b, m - 1, c, l), lcs3(a, n - 1, b, m, c, l), lcs3(a, n, b, m, c, l - 1)) + 1;
       		}else{
-        		return get_max(lcs3(a, n, b, m-1, c, l), lcs3(a, n-1, b, m, c, l), lcs3(a, n, b, m, c, l-1));
+        		return get_max(lcs3(a, n, b, m - 1, c, l), lcs3(a, n - 1, b, m, c, l), lcs3(a, n, b, m, c, l - 1));
       		}
    	}
 	return 0;
