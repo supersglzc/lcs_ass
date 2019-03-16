@@ -21,9 +21,9 @@ int lcs2(int *a, int n,  int *b, int m) {
       	 	return 0;
    	}else{
       		if (a[n - 1] == b[m - 1]){
-         		return get_max(lcs2(a, n-1, b, m-1), lcs2(a, n, b, m-1), lcs2(a, n-1, b, m)) + 1;
+         		return get_max(lcs2(a, n - 1, b, m - 1), lcs2(a, n, b, m - 1), lcs2(a, n - 1, b, m)) + 1;
       		}else{
-         		return get_max(lcs2(a, n-1, b, m-1), lcs2(a, n, b, m-1), lcs2(a, n-1, b, m));
+         		return get_max(lcs2(a, n - 1, b, m - 1), lcs2(a, n, b, m - 1), lcs2(a, n - 1, b, m));
       		}
    	}
 	return 0;
